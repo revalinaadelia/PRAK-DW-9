@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="id" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Praktikum Tailwind CSS - Grid Layout dan Dark Mode</title>
+  <link href="output.css" rel="stylesheet">
+</head>
+<body class="bg-green-100 dark:bg-green-900 text-gray-800 dark:text-gray-200 font-sans">
+  <!-- Konten akan ditambahkan di sini -->
+  <header class="bg-green-700 dark:bg-green-300 text-white p-4">
+    <div class="container mx-auto flex justify-between items-center">
+      <h1 class="text-2xl font-bold">Galeri Foto</h1>
+      <button id="dark-mode-toggle" class="btn toggle-dark-mode">Toggle Dark Mode</button>
+    </div>
+  </header>
+  <section class="py-20">
+    <div class="container mx-auto text-center">
+      <h2 class="text-4xl font-bold mb-4 text-green-700 dark:text-green-300">Selamat Datang di Galeri Kami</h2>
+      <p class="text-lg mb-8 text-green-600 dark:text-green-400">Koleksi foto terbaik untuk Anda.</p>
+    </div>
+  </section>
+  <section class="container mx-auto px-4">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Card 1 -->
+      <div class="bg-green-200 dark:bg-green-700 rounded-lg shadow-md overflow-hidden">
+        <img src="assets/Birthday.jpg" alt="Foto 1" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h3 class="text-xl font-semibold mb-2 text-green-800 dark:text-green-200">Sweet Seventeen</h3>
+          <p class="text-green-600 dark:text-green-300">Laut yang tenang tidak menjamin terlepas dari badai.</p>
+        </div>
+      </div>
+      <!-- Card 2 -->
+      <div class="bg-green-200 dark:bg-green-700 rounded-lg shadow-md overflow-hidden">
+        <img src="assets/Osis.jpg" alt="Foto 2" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h3 class="text-xl font-semibold mb-2 text-green-800 dark:text-green-200">Organisasi</h3>
+          <p class="text-green-600 dark:text-green-300">Ketegasan dan keadilan merupakan pondasi dalam kehidupan.</p>
+        </div>
+      </div>
+      <!-- Card 3 -->
+      <div class="bg-green-200 dark:bg-green-700 rounded-lg shadow-md overflow-hidden">
+        <img src="assets/Futsal.jpg" alt="Foto 3" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h3 class="text-xl font-semibold mb-2 text-green-800 dark:text-green-200">Futsal</h3>
+          <p class="text-green-600 dark:text-green-300">Menggiring ilusi hingga terealisasi.</p>
+        </div>
+      </div>
+      <!-- Card 4 -->
+      <div class="bg-green-200 dark:bg-green-700 rounded-lg shadow-md overflow-hidden">
+        <img src="assets/BTS.jpg" alt="Foto 4" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h3 class="text-xl font-semibold mb-2 text-green-800 dark:text-green-200">Buku Tahunan Sekolah</h3>
+          <p class="text-green-600 dark:text-green-300">Mengabadikan momen agar terkenang dalam ingatan.</p>
+        </div>
+      </div>
+      <!-- Card 5 -->
+      <div class="bg-green-200 dark:bg-green-700 rounded-lg shadow-md overflow-hidden">
+        <img src="assets/Bestfriend.jpg" alt="Foto 5" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h3 class="text-xl font-semibold mb-2 text-green-800 dark:text-green-200">Bestfriend</h3>
+          <p class="text-green-600 dark:text-green-300">Terima kasih sudah saling menguatkan dan bertukar pikiran.</p>
+        </div>
+      </div>
+      <!-- Card 6 -->
+      <div class="bg-green-200 dark:bg-green-700 rounded-lg shadow-md overflow-hidden">
+        <img src="assets/Wisuda.jpg" alt="Foto 6" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h3 class="text-xl font-semibold mb-2 text-green-800 dark:text-green-200">Graduation</h3>
+          <p class="text-green-600 dark:text-green-300">Tuhan tidak pernah mempertemukan seseorang tanpa alasan dan makna yang mendalam.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="bg-green-700 dark:bg-green-300 text-white p-4 mt-10">
+    <div class="container mx-auto text-center">
+      <p>&copy; 2024 Galeri Foto. All rights reserved.</p>
+    </div>
+  </footer>
+  <script>
+    const toggleDarkMode = document.getElementById('dark-mode-toggle');
+    const htmlElement = document.documentElement;
+
+    toggleDarkMode.addEventListener('click', () => {
+      htmlElement.classList.toggle('dark');
+    });
+  </script>
+</body>
+</html>
